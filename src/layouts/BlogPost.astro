@@ -9,11 +9,32 @@ import Header from '../components/Header.astro';
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+
+const articleSchema = JSON.stringify({
+	"@context": "https://schema.org",
+	"@type": "BlogPosting",
+	"headline": title,
+	"description": description,
+	"datePublished": pubDate?.toISOString(),
+	"dateModified": updatedDate?.toISOString() || pubDate?.toISOString(),
+	"author": {
+		"@type": "Person",
+		"name": "Aidas Marcinkevičius",
+		"url": "https://linkedin.com/in/aidasmarcink"
+	},
+	"publisher": {
+		"@type": "Organization",
+		"name": "unchainit.tech",
+		"logo": { "@type": "ImageObject", "url": "https://blog.unchainit.tech/logo.png" }
+	},
+	"mainEntityOfPage": { "@type": "WebPage", "@id": Astro.url.href }
+});
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={`${title} — unchainit.tech`} description={description} />
+		<script type="application/ld+json" set:html={articleSchema} />
 		<style>
 			.article-header {
 				padding: 3em 0 2em;
