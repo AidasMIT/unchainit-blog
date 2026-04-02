@@ -5,27 +5,29 @@ pubDate: 'Apr 02 2026'
 heroImage: ''
 ---
 
-WordPress valdo 43% interneto. Tai nebe pranašumas — tai inercija.
+WordPress valdo 43% interneto ([W3Techs, 2025](https://w3techs.com/technologies/details/cm-wordpress)). Tai nebe pranašumas — tai inercija.
 
-20 metų WordPress buvo atsakymas į "man reikia svetainės." 2026-aisiais tai atsakymas į "nežinau kas dar yra." Ir tai problema, nes kas yra dabar — dramatiška geriau.
+20 metų WordPress buvo atsakymas į "man reikia svetainės." 2026-aisiais tai atsakymas į "nežinau kas dar yra." Ir tai problema, nes kas yra dabar — yra ženkliai geriau.
 
 ## Kodėl WordPress nebetinka 2026-aisiais
 
-### 1. Saugumas — pilno etato darbas
+### 1. Saugumas — nuolatinis galvos skausmas
 
-WordPress yra #1 hakerių taikinys. Ne todėl, kad blogai sukurtas, bet todėl, kad yra visur ir remiasi trečiųjų šalių papildiniais (plugins), kurie dažnai apleisti.
+WordPress yra daugiausiai atakuojama CMS sistema. Ne todėl, kad blogai sukurta, bet todėl, kad yra visur ir remiasi trečiųjų šalių papildiniais.
 
-- 90% nulaužtų CMS svetainių veikia WordPress (Sucuri, 2024)
-- Vidutinė WordPress svetainė naudoja 20-30 papildinių — kiekvienas yra potenciali spraga
-- Atnaujinimai laužo papildinius. Papildinių atnaujinimai laužo temas.
+- WordPress sudaro didžiąją dalį nulaužtų CMS svetainių pagal [Sucuri metinę ataskaitą](https://sucuri.net/reports/website-hacked-trend-report/)
+- Daugelis WordPress svetainių naudoja dešimtis papildinių — kiekvienas yra potenciali spraga
+- Atnaujinimai gali sulaužyti papildinius. Papildinių atnaujinimai gali sulaužyti temas.
 
 Jūs pradėjote verslą ne tam, kad valdytumėte PHP saugumo pataisas.
 
-### 2. Greitis reikalauja brangios optimizacijos
+### 2. Greitis reikalauja papildomų investicijų
 
-Švariai įdiegtas WordPress yra greitas. Tikra WordPress svetainė su 15 papildinių, puslapio kūrimo įrankiu, Google Fonts, analitika ir kontaktine forma? PageSpeed rezultatas: 40-60.
+Švariai įdiegtas WordPress yra greitas. Bet tikra WordPress svetainė su keliolika papildinių, puslapio kūrimo įrankiu ir analitika?
 
-Šiuolaikinės sistemos (Next.js, Astro) rezultatas: **95-100 iš karto**. Jokių papildinių nereikia.
+Patikrinkite patys per [Google PageSpeed Insights](https://pagespeed.web.dev) — palyginkite savo WordPress svetainę su bet kuria Astro ar Next.js svetaine. Skirtumas dažniausiai akivaizdus.
+
+Šiuolaikinės sistemos kaip Next.js ir Astro yra optimizuotos greičiui iš karto — paprastai gauna 90+ balų be jokios papildomos konfigūracijos.
 
 ### 3. Papildinių mokestis
 
@@ -41,25 +43,25 @@ WordPress yra nemokamas. Tikros WordPress svetainės palaikymas — ne:
 | Backup papildinys | €50-100 |
 | **Viso** | **€490-890/metams** |
 
-Ir vis tiek reikia žmogaus, kuris visa tai prižiūrėtų.
+Kainos iš oficialių kiekvieno papildinio puslapių. Ir vis tiek reikia žmogaus, kuris visa tai prižiūrėtų.
 
-### 4. AI padarė WordPress pagrindinį pranašumą nereikšmingu
+### 4. AI padarė WordPress pagrindinį pranašumą mažiau reikšmingu
 
 WordPress pagrindinė savybė visada buvo: "Netechniški žmonės gali kurti svetaines."
 
-2026-aisiais AI įrankiai leidžia netechniškiems žmonėms kurti *geresnes* svetaines:
+2026-aisiais AI įrankiai duoda netechniškiems žmonėms alternatyvą:
 
-- **Lovable, Bolt, v0** — aprašyk ko nori, gauk veikiančią React svetainę
-- **Cursor, Windsurf** — AI padedamas programavimas, kuris pagreitina kūrimą 10x
-- **Claude, GPT-4** — sugeneruok bet kokį turinį, komponentą ar puslapio maketą
+- **[Lovable](https://lovable.dev), [Bolt](https://bolt.new), [v0](https://v0.dev)** — aprašyk ko nori, gauk veikiančią React svetainę
+- **[Cursor](https://cursor.com), [Windsurf](https://codeium.com/windsurf)** — AI padedamas programavimas
+- **Claude, GPT-4** — sugeneruok turinį, komponentus ar maketus
 
-"Paprasta naudoti" pranašumas dingo. AI yra paprastesnis *ir* duoda geresnį rezultatą.
+Šie įrankiai nepakeičia profesionalo patirties (strategija, UX, verslo logika vis tiek reikalauja žmogaus), bet dramatiškai sumažina barjerus.
 
 ### 5. PHP 2026-aisiais
 
-WordPress veikia ant PHP. PHP yra OK — Laravel tai įrodo. Bet WordPress nenaudoja modernaus PHP. Jis naudoja 2005 metų šablonus su atgalinio suderinamumo apribojimais.
+WordPress veikia ant PHP. PHP yra solidi kalba — [Laravel](https://laravel.com/) tai įrodo. Bet WordPress nenaudoja modernaus PHP. Jis nešioja atgalinio suderinamumo bagažą nuo 2005 metų.
 
-JavaScript ekosistema (React, Next.js, Astro) juda greičiau, turi geresnius įrankius ir kuria greitesnes svetaines. Dar svarbiau — AI kodavimo asistentai dramatiškai geriau dirba su JavaScript/TypeScript nei su WordPress PHP.
+JavaScript ekosistema (React, Next.js, Astro) juda greičiau, turi geresnius įrankius, ir AI kodavimo asistentai efektyviau dirba su JavaScript/TypeScript nei su legacy WordPress PHP.
 
 ### 6. Hosting'o priklausomybė
 
@@ -68,25 +70,40 @@ WordPress reikia serverio su PHP ir MySQL:
 - Serverio priežiūra (atnaujinimai, saugumas)
 - Migravimo skausmas keičiant hosting'ą
 
-Šiuolaikinės statinės svetainės diegiamos Vercel, Cloudflare Pages arba Netlify — **nemokamai**. Jokių serverių. Globalus CDN įtrauktas.
+Šiuolaikinės statinės svetainės diegiamos [Vercel](https://vercel.com/pricing), [Cloudflare Pages](https://pages.cloudflare.com/) arba [Netlify](https://www.netlify.com/pricing/) — su nemokamais planais. Jokių serverių. Globalus CDN įtrauktas.
 
 ## Ką naudoti vietoj WordPress
 
 | Paskirtis | Rekomendacija | Kodėl |
 |-----------|--------------|-------|
-| Verslo svetainė (5-15 psl.) | Next.js arba Astro | Greita, SEO ideali, zero priežiūra |
-| Blogas | Astro + Markdown | Statinis, žaibiškas, nemokamas hosting'as |
-| E-komercija | Shopify arba Medusa | Specialiai sukurta, ne "prisukta" |
-| Landing page | Lovable arba Bolt | AI pastatys per minutes |
+| Verslo svetainė (5-15 psl.) | [Next.js](https://nextjs.org/) arba [Astro](https://astro.build/) | Greita, SEO optimizuota, minimali priežiūra |
+| Blogas | Astro + Markdown | Statinis, greitas, nemokamas hosting'as |
+| E-komercija | [Shopify](https://www.shopify.com/) arba [Medusa](https://medusajs.com/) | Specialiai sukurta, ne "prisukta" |
+| Landing page | [Lovable](https://lovable.dev) arba [Bolt](https://bolt.new) | AI padeda sukurti greitai |
+
+## "Bet klientui reikia redaguoti turinį"
+
+Tai paskutinė WordPress gynyba. Ir ji validi — bet išspręsta:
+
+1. **Headless CMS** ([Sanity](https://www.sanity.io/), [Strapi](https://strapi.io/), [Storyblok](https://www.storyblok.com/)) — klientas redaguoja švaroje sąsajoje, frontend'as lieka greitas
+2. **Notion/Markdown kaip CMS** — paprastesnėms svetainėms
+3. **Darbas su programuotoju** — klientas aprašo pakeitimą, programuotojas su AI įrankiais įgyvendina greitai
+
+## Perėjimas
+
+Jei šiandien naudojate WordPress:
+
+1. **Nepanikuokite** — jis vis dar veikia. Šis straipsnis apie naujus projektus, ne skubias migracijas.
+2. **Apsvarstykite alternatyvas naujiems projektams** — yra rimtų priežasčių žiūrėti plačiau.
+3. **Planuokite migracijas strategiškai** — kai ateis laikas atnaujinti dizainą, vertinkite modernias sistemas.
+4. **Paskaičiuokite tikrą WordPress kainą** — hosting'as + papildiniai + priežiūra + programuotojo laikas.
 
 ## Apatinė linija
 
-WordPress buvo revoliucija. Jis demokratizavo interneto publikavimą. Bet pasaulis pajudėjo į priekį, o WordPress — ne.
+WordPress buvo revoliucija. Jis demokratizavo interneto publikavimą. Bet ekosistema aplink jį evolvavo, o WordPress nespėjo.
 
-2026-aisiais statyti ant WordPress — kaip pirkti DVD grotuvą. Techniškai veikia. Bet renkiesi sudėtingumą, kainą ir apribojimus, kai geresni sprendimai egzistuoja kiekviename kainų taške.
-
-AI era nenužudė WordPress. Ji tiesiog padarė alternatyvas tokias geras, kad nebėra priežasties rinktis WordPress.
+2026-aisiais egzistuoja greitesni, saugesni ir pigesni sprendimai kiekviename kainų taške. AI era nenužudė WordPress — ji tiesiog sukūrė geresnes alternatyvas, kurias verta rimtai apsvarstyti.
 
 ---
 
-*Kuriame modernias, AI eros svetaines, kurios greitesnės, pigesnės palaikyti ir geresnės SEO atžvilgiu nei bet kuri WordPress svetainė. [Susisiekite →](https://unchainit.tech)*
+*Kuriame modernias svetaines, kurios greitesnės, pigesnės palaikyti ir geresnės SEO atžvilgiu. [Susisiekite →](https://unchainit.tech)*

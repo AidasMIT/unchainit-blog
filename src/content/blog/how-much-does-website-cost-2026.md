@@ -19,7 +19,7 @@ Here's what websites actually cost in 2026, based on real projects I've built.
 | Web application / SaaS | $10,000 - $50,000+ | 2-6 months |
 | Enterprise platform | $50,000+ | 6+ months |
 
-These are real numbers for quality work. Not Fiverr prices, not agency markups.
+These are based on real projects and typical market rates in 2026. Not Fiverr prices, not agency markups.
 
 ## What You're Actually Paying For
 
@@ -74,7 +74,7 @@ If someone charges extra for this, they're padding the invoice.
 | Maintenance | $50-200/month | Near zero |
 | Flexibility | Plugin dependent | Unlimited |
 
-**My recommendation:** If you need a blog or simple site and want to edit it yourself with zero technical knowledge — WordPress is fine. For everything else, modern frameworks win on speed, security, and long-term cost.
+**My recommendation:** If you need a blog or simple site and want to edit it yourself with zero technical knowledge — WordPress is still a viable option. For everything else, modern frameworks tend to win on speed, security, and long-term cost. You can verify the speed difference yourself using [Google PageSpeed Insights](https://pagespeed.web.dev).
 
 ## Red Flags When Hiring
 

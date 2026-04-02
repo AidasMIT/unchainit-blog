@@ -7,9 +7,9 @@ heroImage: ''
 
 If you run a freight forwarding operation, you know the drill. An email comes in with a transport offer. Your dispatcher opens it, reads through the details, manually extracts loading and unloading points, opens Google Maps, calculates the distance, checks toll costs, and estimates a price.
 
-**Time per offer: 8-12 minutes.**
+**Typical time per offer: around 8-12 minutes** (based on our conversations with Lithuanian freight forwarding companies).
 
-Multiply that by 20-50 offers per day. That's 3-10 hours of pure manual processing. Every single day.
+Multiply that by 20-50 offers per day, and you're looking at several hours of manual processing. Every single day.
 
 ## The Manual Process (What Most Companies Still Do)
 
@@ -39,18 +39,17 @@ Modern AI can read an email, extract structured data (locations, dates, cargo ty
 
 ## The Economics
 
-Let's do the math for a mid-size forwarding company with 5 dispatchers:
+Here's an illustrative comparison for a mid-size forwarding company with 5 dispatchers. Your actual numbers will vary depending on offer volume and complexity:
 
 | Metric | Manual | AI-Assisted |
 |--------|--------|-------------|
-| Time per offer | 10 min | 30 sec |
+| Time per offer | ~10 min | ~30 sec |
 | Offers per day (per person) | 30 | 30 |
-| Daily time spent | 5 hours | 15 min |
-| Monthly time saved | — | ~100 hours |
+| Daily time spent | ~5 hours | ~15 min |
+| Monthly time saved | — | Significant |
 | Cost of tool | $0 | $25-35/month |
-| Value of time saved | — | $2,000+/month |
 
-Even at conservative estimates, the ROI is 50x+.
+The exact ROI depends on your team size and offer volume, but the time savings are substantial enough to justify testing.
 
 ## What to Look For in a Solution
 
