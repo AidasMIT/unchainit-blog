@@ -1,6 +1,6 @@
 ---
 title: 'How to Automate Freight Offer Analysis with AI (And Save 10 Minutes Per Quote)'
-description: 'Freight forwarders spend 8-12 minutes analyzing each transport offer manually. Here is how AI can do it in 30 seconds — with route, pricing, and toll calculations included.'
+description: 'Freight forwarders spend 8-12 minutes analyzing each transport offer manually. Here is how AI can do it in 30 seconds - with route, pricing, and toll calculations included.'
 pubDate: 'Apr 02 2026'
 heroImage: ''
 ---
@@ -22,7 +22,7 @@ Multiply that by 20-50 offers per day, and you're looking at several hours of ma
 7. Calculate recommended price
 8. Decide whether to accept or decline
 
-Each step requires attention and context switching. Mistakes happen — a wrong coordinate, a missed toll section, an underpriced offer that eats your margin.
+Each step requires attention and context switching. Mistakes happen - a wrong coordinate, a missed toll section, an underpriced offer that eats your margin.
 
 ## What AI Can Do Instead
 
@@ -32,7 +32,7 @@ Modern AI can read an email, extract structured data (locations, dates, cargo ty
 - **Calculate optimal route** with real road distances (not straight-line)
 - **Compute toll costs** per country automatically
 - **Estimate recommended price** based on distance, tolls, and market rates
-- **Calculate empty kilometers** — the return trip nobody wants to think about
+- **Calculate empty kilometers** - the return trip nobody wants to think about
 - **Present everything** in a clean dashboard, ready for decision
 
 **Time: 30 seconds.**
@@ -46,7 +46,7 @@ Here's an illustrative comparison for a mid-size forwarding company with 5 dispa
 | Time per offer | ~10 min | ~30 sec |
 | Offers per day (per person) | 30 | 30 |
 | Daily time spent | ~5 hours | ~15 min |
-| Monthly time saved | — | Significant |
+| Monthly time saved | - | Significant |
 | Cost of tool | $0 | $25-35/month |
 
 The exact ROI depends on your team size and offer volume, but the time savings are substantial enough to justify testing.
@@ -56,16 +56,16 @@ The exact ROI depends on your team size and offer volume, but the time savings a
 Not all freight analysis tools are equal. Key features:
 
 ### Must Have
-- **Email integration** — paste or forward an email, get instant analysis
-- **Multi-country toll calculation** — especially for European routes crossing 3-5 countries
-- **Empty kilometer calculation** — the hidden cost that kills margins
-- **Simple UI** — dispatchers aren't tech people. If it needs training, it's too complex.
+- **Email integration** - paste or forward an email, get instant analysis
+- **Multi-country toll calculation** - especially for European routes crossing 3-5 countries
+- **Empty kilometer calculation** - the hidden cost that kills margins
+- **Simple UI** - dispatchers aren't tech people. If it needs training, it's too complex.
 
 ### Nice to Have
-- **Outlook/Teams integration** — analyze directly from your email client
-- **Historical data** — track pricing trends over time
-- **Team dashboard** — see all analyses across your operation
-- **API access** — integrate with your TMS
+- **Outlook/Teams integration** - analyze directly from your email client
+- **Historical data** - track pricing trends over time
+- **Team dashboard** - see all analyses across your operation
+- **API access** - integrate with your TMS
 
 ### Red Flags
 - Requires uploading documents in specific formats (PDFs only, templates, etc.)
@@ -77,10 +77,10 @@ Not all freight analysis tools are equal. Key features:
 
 If you're technical, you might think "I could build this with ChatGPT and some scripts." You could. But:
 
-1. **Email parsing is messy** — freight offers come in every format imaginable
-2. **Toll calculations change** — European toll systems update quarterly
-3. **Route optimization needs real map data** — Google Maps API costs add up fast
-4. **Maintenance is ongoing** — this isn't a weekend project, it's a product
+1. **Email parsing is messy** - freight offers come in every format imaginable
+2. **Toll calculations change** - European toll systems update quarterly
+3. **Route optimization needs real map data** - Google Maps API costs add up fast
+4. **Maintenance is ongoing** - this isn't a weekend project, it's a product
 
 For most companies, buying a specialized tool at $25-35/month is vastly cheaper than building and maintaining your own.
 
@@ -97,4 +97,4 @@ The transition should take less than a day. No integration needed, no IT departm
 
 ---
 
-*We built [Cargoflow](https://cargoflow.lt) to solve exactly this problem. Free tier available — try it with your next freight offer.*
+*We built [Cargoflow](https://cargoflow.lt) to solve exactly this problem. Free tier available - try it with your next freight offer.*

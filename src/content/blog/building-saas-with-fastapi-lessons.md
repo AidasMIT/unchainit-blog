@@ -7,7 +7,7 @@ heroImage: ''
 
 I've shipped two SaaS products using FastAPI as the backend: an AI-powered grant writing assistant and a freight offer analyzer. Both are in production, both serve real users, and both taught me things I wish I'd known earlier.
 
-This isn't a FastAPI tutorial. It's the stuff between the tutorials — architecture decisions, deployment patterns, and mistakes that cost me hours.
+This isn't a FastAPI tutorial. It's the stuff between the tutorials - architecture decisions, deployment patterns, and mistakes that cost me hours.
 
 ## Why FastAPI (And When Not To)
 
@@ -42,7 +42,7 @@ Simple. One VPS runs everything behind Traefik (reverse proxy + auto SSL). Total
 
 **1. Docker Compose for everything**
 
-Backend, database, reverse proxy — all in Docker Compose. One `docker compose up -d` and you're live. No Kubernetes, no ECS, no complexity.
+Backend, database, reverse proxy - all in Docker Compose. One `docker compose up -d` and you're live. No Kubernetes, no ECS, no complexity.
 
 ```yaml
 services:
@@ -91,7 +91,7 @@ When calling LLMs, your input size matters. I hit Anthropic's 200k token limit o
 
 ### 2. Synchronous Mindset
 
-My first version processed documents sequentially — fetch page, extract text, then call AI. Switching to concurrent fetching with `asyncio.gather()` cut response times by 60%.
+My first version processed documents sequentially - fetch page, extract text, then call AI. Switching to concurrent fetching with `asyncio.gather()` cut response times by 60%.
 
 ```python
 # Bad
@@ -125,9 +125,9 @@ No CI/CD pipeline. No GitHub Actions. For a solo founder running 2 products, thi
 
 ### Monitoring
 
-- **Health endpoint** (`/health`) — checks DB connection, returns uptime
-- **Request logging** — FastAPI middleware that logs method, path, duration, status
-- **Error alerts** — Sentry free tier catches unhandled exceptions
+- **Health endpoint** (`/health`) - checks DB connection, returns uptime
+- **Request logging** - FastAPI middleware that logs method, path, duration, status
+- **Error alerts** - Sentry free tier catches unhandled exceptions
 
 That's it. No Grafana dashboards, no Prometheus, no ELK stack. When something breaks, Sentry tells me. When I want to check status, I hit `/health`.
 
@@ -145,10 +145,10 @@ Both products run on the same VPS. The most expensive line item is AI API calls,
 
 ## What I'd Do Differently
 
-1. **Start with PostgreSQL from day one** — I initially used Supabase for convenience, then migrated. Should've gone direct from the start.
-2. **Write database migrations** — I've been running raw SQL for schema changes. It works until it doesn't.
-3. **Add rate limiting earlier** — bots found my endpoints within a week of launch.
-4. **Structured logging** — print statements work in development. In production, you want JSON logs you can actually search.
+1. **Start with PostgreSQL from day one** - I initially used Supabase for convenience, then migrated. Should've gone direct from the start.
+2. **Write database migrations** - I've been running raw SQL for schema changes. It works until it doesn't.
+3. **Add rate limiting earlier** - bots found my endpoints within a week of launch.
+4. **Structured logging** - print statements work in development. In production, you want JSON logs you can actually search.
 
 ## The Bottom Line
 
