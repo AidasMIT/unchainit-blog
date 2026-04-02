@@ -1,0 +1,27 @@
+---
+const today = new Date();
+---
+
+<footer>
+	<p>
+		&copy; {today.getFullYear()} <a href="https://unchainit.tech">unchainit.tech</a> · Built by <a href="https://linkedin.com/in/aidasmarcink" target="_blank" rel="noopener">Aidas</a>
+	</p>
+</footer>
+<style>
+	footer {
+		padding: 2em 1em;
+		text-align: center;
+		border-top: 1px solid rgb(var(--gray-light));
+		margin-top: 3em;
+	}
+	footer p {
+		font-size: 0.85em;
+		color: rgb(var(--gray));
+		margin: 0;
+	}
+	footer a {
+		color: rgb(var(--gray));
+		text-decoration: underline;
+	}
+	footer a:hover { color: rgb(var(--black)); }
+</style>
