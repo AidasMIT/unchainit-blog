@@ -15,42 +15,103 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
+			.article-header {
+				padding: 3em 0 2em;
+				position: relative;
+			}
+			.article-header::after {
+				content: '';
+				position: absolute;
+				right: -200px;
+				top: -100px;
+				width: 400px;
+				height: 400px;
+				background: #d1fae5;
+				border-radius: 50%;
+				filter: blur(80px);
+				opacity: 0.3;
+				pointer-events: none;
+				z-index: -1;
+			}
+			.back-link {
+				display: inline-flex;
+				align-items: center;
+				gap: 6px;
+				font-size: 0.8em;
+				font-weight: 500;
+				color: rgb(var(--gray));
+				text-decoration: none;
+				margin-bottom: 1.5em;
+				padding: 6px 14px;
+				border-radius: 10px;
+				transition: all 0.15s;
+			}
+			.back-link:hover {
+				color: rgb(var(--black));
+				background: rgb(var(--gray-light));
+				text-decoration: none;
+			}
+			.article-meta {
+				font-size: 0.8em;
+				font-weight: 500;
+				color: rgb(var(--gray));
+				margin-bottom: 0.75em;
+			}
+			.article-header h1 {
+				font-size: 2.5em;
+				line-height: 1.15;
+				margin-bottom: 0;
+			}
+			.article-desc {
+				font-size: 1.15em;
+				color: rgb(var(--gray));
+				margin-top: 0.75em;
+				line-height: 1.6;
 			}
 			.hero-image {
-				width: 100%;
+				margin: 0 -1em 2em;
 			}
 			.hero-image img {
 				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
+				width: 100%;
+				border-radius: 16px;
 			}
 			.prose {
 				width: 720px;
 				max-width: calc(100% - 2em);
 				margin: auto;
-				padding: 1em;
+				padding: 0 1em 3em;
 				color: rgb(var(--gray-dark));
 			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
-			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
-			}
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
+			.article-divider {
+				height: 1px;
+				background: rgb(var(--gray-light));
+				margin: 2em 0;
 			}
 			.last-updated-on {
 				font-style: italic;
+				color: rgb(var(--gray));
+				font-size: 0.85em;
+			}
+			/* Article CTA */
+			.article-cta {
+				margin-top: 3em;
+				padding: 2em;
+				background: rgb(var(--gray-light));
+				border: 1px solid #e2e8f0;
+				border-radius: 16px;
+			}
+			.article-cta p {
+				margin: 0;
+				font-size: 0.95em;
+			}
+			.article-cta a {
+				color: #059669;
+				font-weight: 600;
+			}
+			@media (max-width: 720px) {
+				.article-header h1 { font-size: 1.75em; }
+				.article-desc { font-size: 1em; }
 			}
 		</style>
 	</head>
@@ -59,24 +120,27 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<Header />
 		<main>
 			<article>
-				<div class="hero-image">
-					{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
-				</div>
 				<div class="prose">
-					<div class="title">
-						<div class="date">
+					<div class="article-header">
+						<a href="/blog" class="back-link">← All posts</a>
+						<div class="article-meta">
 							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
+							{updatedDate && (
+								<span class="last-updated-on"> · Updated <FormattedDate date={updatedDate} /></span>
+							)}
 						</div>
 						<h1>{title}</h1>
-						<hr />
+						{description && <p class="article-desc">{description}</p>}
 					</div>
+
+					{heroImage && (
+						<div class="hero-image">
+							<Image width={1020} height={510} src={heroImage} alt="" />
+						</div>
+					)}
+
+					<div class="article-divider"></div>
+
 					<slot />
 				</div>
 			</article>
