@@ -5,10 +5,7 @@ import HeaderLink from './HeaderLink.astro';
 <header>
 	<nav>
 		<a href="/" class="logo">
-			<img src="/logo.png" alt="unchainit" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'" />
-			<span class="logo-fallback" style="display:none">
-				<span class="logo-text">unchainit</span><span class="logo-dot">.tech</span>
-			</span>
+			<img src="/logo.svg" alt="unchainit" class="logo-img" />
 		</a>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
@@ -43,16 +40,9 @@ import HeaderLink from './HeaderLink.astro';
 		align-items: center;
 	}
 	.logo-img {
-		height: 28px;
+		height: 30px;
+		width: auto;
 	}
-	.logo-fallback {
-		font-family: 'DM Sans', sans-serif;
-		font-size: 1.1em;
-		font-weight: 700;
-		letter-spacing: -0.03em;
-	}
-	.logo-text { color: rgb(15, 23, 42); }
-	.logo-dot { color: var(--accent); }
 	.internal-links { display: flex; gap: 2px; }
 	nav a {
 		padding: 0.5em 0.875em;
